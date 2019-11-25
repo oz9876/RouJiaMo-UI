@@ -1,0 +1,189 @@
+// ----------------------------文章管理页---------------------------------
+.article-list{
+    .article-item{
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .title{
+        margin-bottom: 14px;
+        display: block;
+        cursor: pointer;
+    }
+    .ope-btn{
+        margin-top: 35px;
+        .status{
+            font-size: 14px;
+            color: #B9BBC2;
+            margin-right: 20px;
+        }
+    }
+}
+.income-box, .information-box{
+    .publish-btn {
+        font-size: 14px;
+        height: 34px;
+        background: #389fff;
+        width: 100px;
+        color: #fff;
+        text-align: center;
+        line-height: 34px;
+        display: inline-block;
+        float: right;
+        border-radius: 4px;
+        margin: 30px 0;
+        cursor: pointer;
+    }
+    .card{
+        flex: 1;
+        padding: 40px;
+        text-align: center;
+        .num{
+            display: block;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    }
+    .btn{
+        background: #40a9ff;
+        color: #fff;
+        line-height: 40px;
+        cursor: pointer;
+    }
+    .title{
+        border-bottom: 1px solid rgb(217, 217, 217);
+        margin: 20px 40px 20px 40px;
+        padding: 20px 0;
+        display: block;
+    }
+
+}
+.income-box{
+    .card{
+        .num{
+            position: relative;
+            display: inline-block;
+            margin-top: 0px;
+        }
+        .num::after{
+            content: '元';
+            display: block;
+            position: absolute;
+            top: 9px;
+            font-size: 10px;
+            right: -20px;
+        }
+    }
+}
+.consult-detail{
+    .operation-btn-list{
+        position: relative;
+    }
+    .consult-item{
+        width: 300px;
+        text-align: right;
+        right: 0;
+        position: absolute;
+        top: 15px;
+    }
+    .bord{
+        padding-left: 30px;
+        padding-top: 10px;
+    }
+    .bord+.bord::before{
+        content: '';
+        background: #e8e8e8;
+        height: 1px;
+        display: block;
+        position: relative;
+        top: -7px;
+    }
+    .name{
+        color: #40a9ff
+    }
+}
+.examine-list{
+    background: #fff;
+    .examine-item + .examine-item::before{
+        content: '';
+        height: 1px;
+        background: #bbb;
+        display: block;
+        position: relative;
+        top: -10px;
+    }
+    .examine-item{
+        padding: 10px;
+        margin: 10px;
+        position: relative;
+        padding-left: 25px;
+        .update-tip{
+            background: #F7C378;
+            border-radius: 100%;
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            left: 0;
+            top: 14px;
+        }
+        .no-update{
+            background: #BBBBBB;
+        }
+    }
+    .title{
+        margin-bottom: 1em;
+        display: block;
+    }
+}
+.article-detail{
+    .phone-img{
+        position: relative;
+        margin: 20px;
+    }
+    .context{
+        position: absolute;
+        height: 457px;
+        width: 260px;
+        top: 80px;
+        left: 95px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 8px;
+        img {
+            width:100%;
+        }
+        p{
+            word-wrap: break-word;
+            text-align: justify;
+            line-height: 1.5;
+            color: #222222;
+        }
+        hr{
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+            background-color: #e8e8e8;
+            transform: scaleY(0.5);
+            margin: 18px 0;
+            border: 0;
+            height: 1px;
+        }
+    }
+    // .context::-webkit-scrollbar { width: 0 !important }
+}
+.float-left{
+    float: left;
+}
+.ant-upload.ant-upload-select-picture-card{
+    height: 100px;
+    border-radius: 0;
+    background: #FFFFFF;
+    *{
+        color: #B9BBC2;
+    }
+    .anticon-plus{
+        font-size: 20px;
+        font-weight: 900;
+    }
+}

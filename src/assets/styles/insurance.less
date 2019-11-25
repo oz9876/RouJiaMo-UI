@@ -1,0 +1,65 @@
+.content-box{
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    border-radius: 5px;
+    .ant-row{
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        padding-left: 20px;
+    }
+    .sound, .message-center{
+        display: flex;
+        align-items: center;
+    }
+    .status-disabled{
+        background: #aaa;
+        border: 1px solid #aaa;
+        color: #ffffff;
+    }
+    .sign-added{
+        background: #f7ca03;
+        border-color: #f7ca03;
+    }
+}
+.content-box + .content-box{
+    margin-top: 20px;
+}
+// 录音样式
+.sound-recording{
+    width: 180px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 10px;
+}
+.box{
+    display: flex;
+    //保险产品信息样式
+    .insurance-box{
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 20px;
+        padding: 20px;
+        .ant-row{
+            padding-left: 0px;
+        }
+    }
+    .insurance-box + .insurance-box{
+        margin-left: 20px;
+    }
+}
+.outbound{
+    .out-bound-btn + .out-bound-btn{
+        margin-left: 20px;
+    }
+}

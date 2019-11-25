@@ -1,0 +1,129 @@
+#1.驼峰式命名法介绍
+    首字母小写。eg：studentInfo、userInfo、productInfo;
+
+#2.文件资源命名
+    文件名建议只使用小写字母，不使用大写字母。( 为了醒目，某些说明文件的文件名，可以使用大写字母，比如README、LICENSE。 )
+    文件名包含多个单词时，单词之间建议使用半角的连词线 ( - ) 分隔。
+
+#3.函数命名
+    命名方式 : 小驼峰方式 ( 构造函数使用大驼峰命名法 )
+    命名规则 : 前缀为动词
+-- can
+    判断是否可执行某个动作 ( 权限 ), 函数返回一个布尔值。 true：可执行； false：不可执行
+    // 是否可阅读
+    function canRead() {
+        return true;
+    }
+-- has
+    判断是否含有某个值,  函数返回一个布尔值。  true：含有此值；false：不含有此值
+
+-- is
+    判断是否为某个值,  函数返回一个布尔值。  true：为某个值；false：不为某个值
+
+-- get
+    获取某个值, 函数返回一个非布尔值
+    //获取姓名
+    function getName{
+        return this.name
+    }
+
+-- set
+    设置某个值,  无返回值、返回是否设置成功或者返回链式对象
+
+#4. 常量
+    命名方法 : 全部大写
+    命名规范 : 使用大写字母和下划线来组合命名，下划线用以分割单词。
+    推荐： const MAX_COUNT = 10;
+          const URL = 'http://www.baidu.com';
+
+#5. 注释规范 // (1单行注释)
+    *单独一行：// (双斜线)与注释文字之间保留一个空格
+        在代码后面添加注释：// (双斜线)与代码之间保留一个空格，并且// (双斜线)与注释文字之间保留一个空格。
+        注释代码：// (双斜线)与代码之间保留一个空格。
+        举例 var maxCount = 10; // 设置最大量
+    
+    *多行注释 ( / 注释说明 / )若开始(/*和结束(*/)都在一行，推荐采用单行注释
+        若至少三行注释时，第一行为/*，最后行为*/，其他行以*开始，并且注释文字与*保留一个空格。
+        推荐 : /*
+              * 代码执行到这里后会调用setTitle()函数
+              * setTitle()：设置title的值
+              */
+              setTitle();
+
+    *函数 ( 方法 ) 注释:
+      /** 
+      * 函数说明 
+      * @关键字 {参数类型} 参数名  描述信息, 描述参数的信息
+      */
+
+    /**
+    * 获取校验信息
+    * @param {String} appSecret App Secret
+    * @param {String} nonce 随机值
+    * @param {String} curTime 当前时间（秒数）
+    */
+    function getCheckSum(appSecret, nonce, curTime) {
+        return require('crypto').createHash('sha1').update(appSecret).update(nonce).update(curTime).digest('hex');
+    }
+    @param
+    @param {参数类型} 参数名  描述信息, 描述参数的信息
+    @param {String} name 传入名称
+
+    @return
+    @return {返回类型} 描述信息, 描述返回值的信息
+    @return {Boolean} true:可执行;false:不可执行
+
+    @author
+    @author 作者信息 [附属信息：如邮箱、日期], 描述此函数作者的信息
+    @author 张三 2015/07/21 
+
+    @version
+    @version XX.XX.XX, 描述此函数的版本号
+    @version 1.0.3
+
+    @example
+    @example 示例代码
+    @example setTitle('测试')
+  
+举例:  /**
+        - 合并Grid的行
+        - @param {Ext.Grid.Panel} grid 需要合并的Grid
+        - @param {Array} cols 需要合并列的Index(序号)数组；从0开始计数，序号也包含。
+        - @param {Boolean} isAllSome ：是否2个tr的cols必须完成一样才能进行合并。true：完成一样；false(默认)：不完全一样
+        - @return void
+        - @author polk6 2018/07/21 
+        - @example
+        - _________________                             _________________
+        - |  年龄 |  姓名 |                             |  年龄 |  姓名 |
+        - -----------------      mergeCells(grid,[0])   -----------------
+        - |  18   |  张三 |              =>             |       |  张三 |
+        - -----------------                             -  18   ---------
+        - |  18   |  王五 |                             |       |  王五 |
+        - -----------------                             -----------------
+        */
+
+        function mergeCells(grid, cols, isAllSome) {
+            // Do Something
+        }
+
+#6. alt标签不为空
+    <img>标签的 alt 属性指定了替代文本，用于在图像无法显示或者用户禁用图像显示时，代替图像显示在浏览器中的内容。
+
+#7. 首选函数式风格
+        函数式编程可以简化代码并缩减维护成本，因为它容易复用，又适当地解耦和更少的依赖.
+        建议用es6编写; (http://es6.ruanyifeng.com/)
+        var arr = [10, 3, 7, 9, 100, 20];
+        var sum = arr.reduce(function(prevValue, currentValue) {
+            return prevValue + currentValue;
+        }, 0);
+        console.log('The sum of array ' + arr + ' is: ' + sum);
+
+#8. 三元条件判断（if 的快捷方法）
+        用三元操作符分配或返回语句。在比较简单的情况下使用，避免在复杂的情况下使用。
+        if(x === 10) {
+            return 'valid';
+        } else {
+            return 'invalid';
+        }
+
+        简写: return x === 10 ? 'valid' : 'invalid'

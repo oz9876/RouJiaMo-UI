@@ -1,0 +1,489 @@
+/* 引入对应一级菜单的less文件 */
+@import "variables";       // 全局变量
+@import "account";         // 账号管理
+@import "duty";            // 排班管理
+@import "order";           // 订单管理
+@import "service";         // 服务管理
+@import "taskpool";        // 任务池管理
+@import "workbench";       // 工作台管理
+@import "information";     // 资讯管理
+@import "questionnaire";   // 问卷管理
+@import "consult";         // 咨询管理
+@import "reconciliation";  // 对账管理
+@import "enter";            // 执业信息
+@import "earning";          //收益概览
+@import "insurance";        //保险意向客户管理
+#root{
+    height: 100%;
+    min-width: 1200px;
+    .ant-layout{
+        .ant-layout-sider{
+            padding: 20px;
+            min-height: 100vh;
+            // background-image: url(../images/menuBg.png);
+            background-image: url(http://app.h5.ihaozhuo.com/yjk-health/images/menuBg.png);
+            background-size: cover;
+            height: 100vh;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+        .ant-menu-dark, .ant-menu-dark .ant-menu-sub{
+            background: rgba(255, 255, 255, 0);
+            color: #FFFFFF;
+        }
+        .ant-menu-dark .ant-menu-inline.ant-menu-sub{
+            background: rgba(255, 255, 255, 0);
+            box-shadow: none;
+            a{
+                color: #FFFFFF;
+                font-size: 12px;
+            }
+        }
+        .ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected{
+            background-color: rgba(7, 0, 129, 0.2);
+        }
+        .ant-menu-submenu-title{
+            padding-left: 16px !important;
+            margin: 0px !important;
+            .ant-menu-item{
+                height: 30px !important;
+                a{
+                    line-height: 30px!important;
+                }
+            }
+        }
+        .second-sub-menu{
+            .ant-menu-submenu-title{
+                padding-left: 48px !important;
+                padding: 0 16px;
+                font-size: 14px;
+            }
+            .ant-menu-item{
+                padding-left:60px !important;
+            }
+        }
+
+    }
+    .ant-table-thead > tr > th {
+        background: #ececec;
+        font-size: 12px;
+    }
+    .right-body{
+        flex: 1;
+        background: #FFF;
+        display:flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .duty-table{
+        table{
+            padding: 0;
+        }
+        tr td{
+            padding: 0;
+            .duty-table-td{
+                line-height: 32px;
+                width: 100%;
+                display: inline-block;
+                padding: 0 8px;
+                cursor: pointer;
+            }
+        }
+        .overdue{
+            background: #949595;
+        }
+        .stop{
+            background: #ecc37b;
+        }
+        .temporary{
+            background: #bddb9f;
+        }
+    }
+    .home-ul{
+        li{
+           cursor: pointer;
+        }
+    }
+    // 列表样式
+    .ant-table-small > .ant-table-content > .ant-table-body > table{
+        padding: 0;
+    }
+}
+.pull-right{
+	float: right;
+}
+.hide{
+	display: none !important;
+}
+.logo{
+    text-align: center;
+    margin: 0px auto 20px
+}
+.ant-layout{
+	flex-direction: row
+}
+.app-head{
+    line-height: 60px;
+}
+.ant-breadcrumb{
+    margin: 34px 0px 24px 0px !important;
+}
+.app-home{
+    width: 100%;
+    height: 100%;
+    ul{
+        padding: 0 15px;
+        float:left;
+        li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 25px;
+            margin-top: 40px;
+        }
+    }
+    .ant-menu{
+        width: 85%;
+        padding: 0px !important;
+        .ant-menu-item{
+            padding-left: 14px !important;
+        }
+    }
+    .module-img{
+        width: 200px;
+        height: 150px;
+    }
+    .pagination{
+        li{
+            margin-top: 40px;
+            margin-right: 8px;
+            margin-left: 0;
+        }
+    }
+}
+.app-search{
+    margin: 15px 0!important;
+    padding: 20px!important;
+    background: #fff;
+    border: 1px solid #EEEEEE;
+}
+.app-search-keyword{
+    margin: 15px 0;
+    padding-top: 30px;
+    background: #fff;
+    border: 1px solid #EEEEEE;
+}
+.app-button+.app-button{
+    margin-left: 10px;
+}
+.image-content{
+	padding: 0 !important;
+}
+.operation-btn{
+    color: #2db7f5;
+    cursor: pointer;
+}
+.lone-content{
+    max-width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden !important;
+}
+.margin-left{
+	margin-left: 10px;
+}
+.operation-btn-list{
+    .operation-btn{
+        white-space: nowrap;
+    }
+    .operation-btn + .operation-btn::before {
+        content: '';
+        background: #d9d9d9;
+        font-size: 10px;
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        margin: 0 5px;
+    }
+}
+
+.ant-modal .ant-modal-content{
+    border-radius: 0;
+}
+.ant-btn{
+    border-radius: 0;
+    padding: 0 20px;
+}
+.ant-table-wrapper{
+    .ant-pagination-prev, .ant-pagination-next, .ant-pagination-item{
+        .ant-pagination-item-link{
+            border-radius: 0;
+        }
+        border-radius: 0;
+    }
+    .ant-table table{
+        background:#fff;
+        border-radius: 0;
+    }
+}
+.modal-head{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.app-table-box{
+    margin: 5px 0 15px 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #EEEEEE;
+}
+.app-table-box-keyword{
+    margin: 5px 0 15px 0;
+    padding: 20px 35px;
+    background: #fff;
+    border: 1px solid #EEEEEE;
+}
+.scroll-table{
+    position: absolute;
+    width: 100%;
+}
+
+
+// 覆盖nprogress 进度条
+#nprogress {
+    .bar{
+        background:#1890ff !important;
+    }
+    .peg{
+        box-shadow: 0 0 .14rem #1890ff , 0 0 .13rem #1890ff !important;
+        -webkit-transform: rotate(0) translate(0,0) !important;
+            -ms-transform: rotate(0) translate(0,0) !important;
+                transform: rotate(0) translate(0,0) !important;
+    }
+    .spinner .spinner-icon{
+        border-top-color: #1890ff !important;
+        border-left-color: #1890ff !important;
+        width: 50px;
+        height: 50px;
+        border: dotted 4px transparent;
+        position: fixed;
+        box-sizing: border-box;
+        top: 50%;
+        left: 50%;
+        z-index: 99;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); 
+    }
+}
+
+// 网易云上传视频的 button控件
+#fileInput{
+    width: 100px !important;
+}
+// 富文本编辑器
+.w-e-text{
+    // h1{
+    //     margin-left: 10px;
+    //     position: relative;
+    // }
+    // h1:before{
+    //     content: "";
+    //     background-color: #0087ff;
+    //     width: 3px;
+    //     position: absolute;
+    //     top: 3px;
+    //     bottom: 3px;
+    //     left: -10px;
+    // }
+    h1,h2,h3,h4,h5,h6{
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 27px;
+        color: #333;
+        margin-bottom: 15px;
+        margin-left: 10px;
+        position: relative;
+    }
+    h1::before{
+        content: '';
+        background-color:#0087ff;
+        width: 3px;
+        position: absolute;
+        top: 4px;
+        bottom: 5px;
+        left: -10px;
+    }
+
+    p{
+        font-size: 16px;
+        color: #333;
+        line-height: 27px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding: 0;
+        word-wrap: break-word;
+    }
+    p a{
+        display: inline!important;
+        font-size: 16px;
+    }
+    img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    a{
+        color: #0087ff;
+        line-height: 17px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        display: block;
+    }
+    ol li{
+        list-style-type:decimal;
+    }
+    ul,ol{
+        margin-bottom: 10px;
+    }
+    ul li{
+        list-style-type:disc;
+    }
+    li{
+        list-style-position: inside;
+        font-size: 16px;
+        color: #333;
+        line-height: 27px;
+    }
+
+    hr{
+        width: 100%;
+        margin:0 0 20px 0;
+        display: block;
+        border:0.5px solid #ffffff;
+        border-top:0.5px solid #ddd;
+    }
+    blockquote{
+        font-size: 16px;
+        background-color: #f2f2f2;
+        color: #777;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-bottom: 10px;
+        line-height: 27px;
+    }
+}
+.phone-img{
+    .context{
+        // h1{
+        //     margin-left: 10px;
+        //     position: relative;
+        // }
+        // h1:before{
+        //     content: "";
+        //     background-color: #0087ff;
+        //     width: 3px;
+        //     position: absolute;
+        //     top: 3px;
+        //     bottom: 3px;
+        //     left: -10px;
+        // } 
+        h1,h2,h3,h4,h5,h6{
+            font-size: 17px;
+            font-weight: bold;
+            line-height: 27px;
+            color: #333;
+            margin-bottom: 15px;
+            margin-left: 10px;
+            position: relative;
+        }
+        h1::before{
+            content: '';
+            background-color:#0087ff;
+            width: 3px;
+            position: absolute;
+            top: 4px;
+            bottom: 5px;
+            left: -10px;
+        }
+
+        p{
+            font-size: 16px;
+            color: #333;
+            line-height: 27px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 0;
+            word-wrap: break-word;
+        }
+        p a{
+            display: inline!important;
+            font-size: 16px;
+        }
+        img{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        a{
+            color: #0087ff;
+            line-height: 17px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: block;
+        }
+        ol li{
+            list-style-type:decimal;
+        }
+        ul,ol{
+            margin-bottom: 10px;
+        }
+        ul li{
+            list-style-type:disc;
+        }
+        li{
+            list-style-position: inside;
+            font-size: 16px;
+            color: #333;
+            line-height: 27px;
+        }
+
+        hr{
+            width: 100%;
+            margin:0 0 20px 0;
+            display: block;
+            border:0.5px solid #ffffff;
+            border-top:0.5px solid #ddd;
+        }
+        blockquote{
+            font-size: 16px;
+            background-color: #f2f2f2;
+            color: #777;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+            line-height: 27px;
+        }
+    }
+}
+// ant-design样式
+.ant-modal-header{
+    background: #F3F3F3;
+}
+
+.article-detail{
+    // 网易视频video标签样式
+    .video-js{
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        max-height: 500px;
+    }
+}
+
+.policyName{
+    .policyName-item{
+        white-space: nowrap;
+    }
+    .policyName-item + .policyName-item::before {
+        content: ',';
+        font-size: 10px;
+        display: inline-block;
+        margin: 0 5px;
+    }
+}

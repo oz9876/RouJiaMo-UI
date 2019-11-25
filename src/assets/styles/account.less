@@ -1,0 +1,74 @@
+// ----------------------------账号管理页---------------------------------
+// inputdisabled 覆盖默认样式 
+.input-disabled {
+    background-color: #fff !important;
+	color: #000 !important; 
+}
+.operation-info{
+    width: 50%;
+    height: 30px;
+    float: left;
+}
+//账号信息页面
+.doctor_register_id_img{
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+    position: relative;
+    span{
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        position: absolute;
+        top: -20px;
+        right: -10px;
+    }
+}
+.msg-collapse{
+    width: 1049px;
+    .ant-collapse-item + .ant-collapse-item{
+        border-top: 1px solid #d9d9d9;
+    }
+    .ant-collapse-item .ant-collapse-header{
+        p{
+            margin-bottom: 0;
+        }
+        .arrow {
+            left: initial;
+            right: 16px;
+        }
+        .anticon {
+            left: initial;
+            right: 16px;
+        }
+        background-color: #FFF !important;
+        padding-left: 10px;
+    }
+    .msg-header{
+        width: 80%;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .over-hidden{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 55%;
+            vertical-align: top;
+            display: inline-block;
+        }
+    }
+    .msg-time{
+        float: right;
+        margin-right: 45px;
+    }
+    .msg-content{
+        padding-left: 24px;
+    }
+}
